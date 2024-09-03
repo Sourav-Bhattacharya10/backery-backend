@@ -1,0 +1,8 @@
+1. To create migration folder:
+sea-orm-cli migrate init
+
+2. To commit migration changes to db:
+DATABASE_URL="postgres://postgres:postgres@localhost:5432/postgres" sea-orm-cli migrate refresh
+
+3. Generate entity files of database `bakeries_db` to `src/entities`
+sea-orm-cli generate entity -u postgres://postgres:postgres@localhost:5432/postgres -o src/entities
